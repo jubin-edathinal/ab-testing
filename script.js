@@ -1,4 +1,4 @@
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXEWQPEM9F"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXEWQPEM9F">
 
 // Function to randomly assign users to a variation
 function assignVariation() {
@@ -37,3 +37,4 @@ document.getElementById('button').addEventListener('click', function () {
     });
     console.log('Button clicked on Variation:', variation);
 });
+</script>
