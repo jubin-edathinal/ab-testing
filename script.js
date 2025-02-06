@@ -35,3 +35,10 @@ window.onload = function() {
   // Apply the variation
   applyVariation(variation);
 };
+
+document.getElementById('button').addEventListener('click', function() {
+  gtag('event', 'click', {
+    'event_category': 'Button',
+    'event_label': 'Sign Up Button'
+  });
+});
