@@ -1,3 +1,5 @@
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXEWQPEM9F"></script>
+
 // Function to randomly assign users to a variation
 function assignVariation() {
     const variations = ['A', 'B']; // Add more variations if needed
