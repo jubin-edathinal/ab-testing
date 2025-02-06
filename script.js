@@ -16,7 +16,11 @@ function applyVariation(variation) {
     document.getElementById('headline').innerText = 'Discover Our Amazing Offers!';
     document.getElementById('button').style.backgroundColor = 'green';
   }
-
+  // Track the variation in Google Analytics
+  gtag('event', 'ab_test_assigned', {
+    'event_category': 'A/B Test',
+    'event_label': 'Variation ' + variation
+  });
   // Track the variation (optional, for analytics)
   console.log('User assigned to Variation:', variation);
 }
@@ -37,8 +41,10 @@ window.onload = function() {
 };
 
 document.getElementById('button').addEventListener('click', function() {
+  let variation = localStorage.getItem('abTestVariation');
   gtag('event', 'click', {
     'event_category': 'Button',
-    'event_label': 'Sign Up Button'
+    'event_label': 'Version ' + variation
   });
+  console.log('Button clicked on Variation:', variation);
 });
