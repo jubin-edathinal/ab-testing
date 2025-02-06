@@ -1,6 +1,6 @@
 // Function to randomly assign users to a variation
 function assignVariation() {
-  const variations = ['A', 'B']; // Add more variations if needed
+  const variations = ['A', 'B', 'C', 'D']; // Add more variations if needed
   const randomIndex = Math.floor(Math.random() * variations.length);
   return variations[randomIndex];
 }
@@ -15,7 +15,17 @@ function applyVariation(variation) {
     // Apply Version B (Variant)
     document.getElementById('headline').innerText = 'Discover Our Amazing Offers!';
     document.getElementById('button').style.backgroundColor = 'green';
+  } else if (variation === 'C') {
+    // Apply Version C (Variant)
+    document.getElementById('headline').innerText = 'Discover Our Amazing Offers!';
+    document.getElementById('button').style.backgroundColor = 'red';
+  } else if (variation === 'D') {
+    // Apply Version D (Variant)
+    document.getElementById('headline').innerText = 'Discover Our Amazing Offers!';
+    document.getElementById('button').style.backgroundColor = 'yellow';
   }
+
+  
   // Track the variation in Google Analytics
   gtag('event', 'ab_test_assigned', {
     'event_category': 'A/B Test',
